@@ -21,7 +21,6 @@ function Member({ app, onMemberChange }) {
             memberImage,
             memberBirthday
         )
-
         setIsEditOpen(false);
     }
 

@@ -12,14 +12,14 @@ function App() {
   if (!appData) {
     appData = {
       clubTitle: 'JymGym',
-      clubImage: 'https://cpwebassets.codepen.io/assets/packs/icon-learn-b1311620e99cea826f259aa2f7750940.svg',
+      clubImage: 'https://images.pexels.com/photos/4164765/pexels-photo-4164765.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       clubDescription: 'Open Gym 06:00 - 18:00 Rotchild 15 , Tel Aviv',
       clubPhone: '0555552555',
       clubEmail: 'info@jymgym.com',
       clubWebsite: null,
       memberName: 'Avi Bitter',
       memberBio: 'Warrior Ninja',
-      memberImage: 'https://cpwebassets.codepen.io/assets/packs/icon-learn-b1311620e99cea826f259aa2f7750940.svg',
+      memberImage: 'https://images.pexels.com/photos/116077/pexels-photo-116077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       memberBirthday: 'June 20, 1990'
     }
     // Set localStorage to init state
