@@ -6,12 +6,12 @@ function Club({ app, onClubChange }) {
     const [isMembershipSelected, setIsMembershipSelected] = useState(true);
     const [isEditOpen, setIsEditOpen] = useState(false);
 
-    const [clubTitle, setClubTitle] = useState('');
-    const [clubImage, setClubImage] = useState('');
-    const [clubDescription, setClubDescription] = useState('');
-    const [clubPhone, setClubPhone] = useState('');
-    const [clubEmail, setClubEmail] = useState('');
-    const [clubWebsite, setClubWebsite] = useState('');
+    const [clubTitle, setClubTitle] = useState(app.clubTitle);
+    const [clubImage, setClubImage] = useState(app.clubImage);
+    const [clubDescription, setClubDescription] = useState(app.clubDescription);
+    const [clubPhone, setClubPhone] = useState(app.clubPhone);
+    const [clubEmail, setClubEmail] = useState(app.clubEmail);
+    const [clubWebsite, setClubWebsite] = useState(app.clubWebsite);
 
     const handleEdit = (event) => {
         event.preventDefault();
@@ -41,17 +41,17 @@ function Club({ app, onClubChange }) {
                     <div className="text-gray-200 text-2xl text-center py-4 max-w-xs mx-auto">{app.clubDescription}</div>
                     <div className="w-9/10 bg-gray-100 border-2 border-gray-300 rounded-lg px-10 py-4 md:px-24 mx-auto flex flex-row items-center gap-20  ">
                         <div className="w-1/3">
-                            <a target="_blank" href={`tel:${app.clubPhone}`}>
+                            <a href={app.clubPhone ? 'tel:' + app.clubPhone : '#header'}>
                                 <img src="/images/phone.png" alt="" className={`mx-auto w-12 object-fit ${!app.clubPhone ? 'opacity-60' : ''}`} />
                             </a>
                         </div>
                         <div className="w-1/3">
-                            <a target="_blank" href={`mailto:${app.clubEmail}`}>
+                            <a href={app.clubEmail ? 'mailto:' + app.clubEmail : '#header'}>
                                 <img src="/images/email.png" alt="" className={`mx-auto w-24 object-fit ${!app.clubEmail ? 'opacity-60' : ''}`} />
                             </a>
                         </div>
                         <div className="w-1/3">
-                            <a target="_blank" href={app.clubWebsite ? 'https://' + app.clubWebsite : '#header'}>
+                            <a href={app.clubWebsite ? 'https://' + app.clubWebsite : '#header'}>
                                 <img src="/images/website.png" alt="" className={`mx-auto w-12 object-fit ${!app.clubWebsite ? 'opacity-60' : ''}`} />
                             </a>
                         </div>
@@ -81,7 +81,7 @@ function Club({ app, onClubChange }) {
                         </div>
                     </div>
                 </div>
-                <div className="text-center text-white font-semibold py-4"><Link to={'/member'}>MEMBERS</Link></div>
+                <div className="text-center text-white font-semibold py-4"><Link to={'/member'}>MEMBERS PAGE</Link></div>
             </div>
             <div className={`container max-w-xl py-10 mx-auto ${isEditOpen ? 'block' : 'hidden'}`}>
                 <form className="flex flex-col justify-between px-5 max-w-md mx-auto"

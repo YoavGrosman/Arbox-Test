@@ -75,26 +75,11 @@ function App() {
         </div>
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Club app={app} onClubChange={handleClubChange} />} />
         <Route path="club" element={<Club app={app} onClubChange={handleClubChange} />} />
         <Route path="member" element={<Member app={app} onMemberChange={handleMemberChange} />} />
       </Routes>
     </div>
-  );
-}
-
-function Home() {
-  return (
-    <>
-      <main className="mt-10 container text-center mx-auto">
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
-      </main>
-      <nav className="mt-10 container text-center mx-auto">
-        <Link to="/club" className="w-24 h-12 border border-gray-300 rounded p-6 ">Clubs</Link>
-        <Link to="/member" className="w-24 h-12 border border-gray-300 rounded p-6 ">Members</Link>
-      </nav>
-    </>
   );
 }
 

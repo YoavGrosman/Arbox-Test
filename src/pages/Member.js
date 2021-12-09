@@ -5,12 +5,12 @@ function Member({ app, onMemberChange }) {
 
     const [isEditOpen, setIsEditOpen] = useState(false);
 
-    const [memberName, setMemberName] = useState('');
-    const [memberImage, setMemberImage] = useState('');
-    const [memberBio, setMemberBio] = useState('');
-    const [memberDay, setMemberDay] = useState('1');
-    const [memberMonth, setMemberMonth] = useState('January');
-    const [memberYear, setMemberYear] = useState('1969');
+    const [memberName, setMemberName] = useState(app.memberName);
+    const [memberImage, setMemberImage] = useState(app.memberImage);
+    const [memberBio, setMemberBio] = useState(app.memberBio);
+    const [memberDay, setMemberDay] = useState('10');
+    const [memberMonth, setMemberMonth] = useState('December');
+    const [memberYear, setMemberYear] = useState('1989');
 
     const handleEdit = (event) => {
         event.preventDefault();
@@ -71,7 +71,7 @@ function Member({ app, onMemberChange }) {
                         </div>
                     </div>
                 </div>
-                <div className="text-center text-white font-semibold py-4"><Link to={'/club'}>CLUBS</Link></div>
+                <div className="text-center text-white font-semibold py-4"><Link to={'/club'}>CLUBS PAGE</Link></div>
             </div>
             <div className={`container max-w-xl py-10 mx-auto ${isEditOpen ? 'block' : 'hidden'}`}>
                 <form className="flex flex-col justify-between px-5 max-w-md mx-auto"
